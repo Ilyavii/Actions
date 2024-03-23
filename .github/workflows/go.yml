@@ -9,10 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4  # Update to v4
+      with:
+        ref: main  # Update branch name if necessary
 
     - name: Set up Go
-      uses: actions/setup-go@v4
+      uses: actions/setup-go@v5  # Update to v5
       with:
         go-version: '1.22'
 
